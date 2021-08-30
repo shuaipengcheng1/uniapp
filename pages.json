@@ -3,14 +3,72 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "黑马商城",
+				"navigationBarTextStyle":"white",
+				"onReachBottomDistance":200
+			}
+		},
+		{
+			"path": "pages/admin/admin",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"navigationBarTextStyle":"white"
+			}
+		},
+		{
+			"path": "pages/info/info",
+			"style": {
+				"navigationBarTitleText": "资讯",
+				"navigationBarTextStyle":"white"
+			}
+		},
+		{
+			"path": "pages/caft/caft",
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"navigationBarTextStyle":"white"
+			}
+		},
+		{
+			"path":"pages/product_info/product_info",
+			"style":{
+				"navigationBarTitleText":"商品详情",
+				"navigationBarTextStyle":"white"
 			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#9f0000",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar":{
+		"list":[
+			{
+			"iconPath":"static/_home.png",
+			"pagePath":"pages/index/index",
+			"selectedIconPath":"static/home.png",
+			"text":"首页"
+			},
+			{
+				"iconPath":"static/_search.png",
+				"pagePath":"pages/info/info,",
+				"selectedIconPath":"static/search.png",
+				"text":"资讯"
+			},
+			{
+				"iconPath":"static/_videocamera.png",
+				"pagePath":"pages/caft/caft",
+				"selectedIconPath":"static/videocamera.png",
+				"text":"购物车"
+			},
+			{
+				"iconPath":"static/_my.png",
+				"pagePath":"pages/admin/admin",
+				"selectedIconPath":"static/my.png",
+				"text":"我的"
+			}
+		]
 	}
 }

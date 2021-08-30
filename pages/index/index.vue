@@ -1,24 +1,40 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
+		<!-- 轮播图 -->
+		<Swiper></Swiper>
+		<!-- 分类 -->
+		<Part></Part>
+		<!-- 推荐列表 20长度 -->
+		<Info @reach = "reach"></Info>
 	</view>
 </template>
 
 <script>
+	// 引入轮播图
+	import Swiper from '../../components/Swiper.vue'
+	// 引入分类
+	import Part from '../../components/Part.vue'
+	// 推荐列表
+	import Info from '../../components/info.vue'
 	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
+		components: {
+			Swiper
+			,Part
+			,Info
 		},
-		onLoad() {
-
+		data() {
+		return{}
+		},
+		onLoad (){
+	
 		},
 		methods: {
 
+		},
+		onReachBottom() {
+			// 调用子组件的消息订阅
+			uni.$emit("refresh")
+		
 		}
 	}
 </script>
