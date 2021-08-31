@@ -5,12 +5,15 @@
 			     <view class="list_img">
 			     	<image :src="item.goods_small_logo" mode="widthFix"></image>
 			     </view>
+				 <view class="list_price">
+				 	<i  class="iconfont icon-3shoujia"></i><text>{{item.goods_price}}</text>
+				 </view>
 				 <view class="list_title">
 				 	<text>{{item.goods_name}}</text>
 				 </view>
 			 </view>
 		</view>
-		<view class="" v-if="end">
+		<view class="bottom" v-if="end">
 			已经到底了~
 		</view>
 	</view>
@@ -64,6 +67,23 @@
 					this.arr.goods=[...this.arr.goods,...value[1].data.message.goods] 
 				})
 			})
+			// 下拉刷新事件
+			uni.$on('pull',()=>{
+				this.arr.goods =[] //清空数组
+				this.pagenum=1
+				uni.showToast({
+					title:"加载~"
+				})
+				uni.request({
+					url:`https://api-hmugo-web.itheima.net/api/public/v1/goods/search?cid=5&pagesize=10&pagenum=${this.pagenum}`,
+					method:"GET"
+				}).then((value)=>{
+					uni.hideToast()
+					// 拼接数组
+					this.arr.goods=[...this.arr.goods,...value[1].data.message.goods] 
+					uni.stopPullDownRefresh()
+				})
+			})
 			
 			
 			
@@ -98,6 +118,7 @@ justify-content: space-around;
 
 	.list_item{
 		height: 600rpx;
+		justify-content: space-around;
 		width: 45%;
 		margin: 10rpx;
 		display: flex;
@@ -122,5 +143,13 @@ justify-content: space-around;
 			}
 		}
 	}
+}
+.bottom{
+	display: flex;
+	height: 3rem;
+     justify-content: center;
+	 align-items: center;
+	 color: pink;
+	 font-weight: bold;
 }
 </style>

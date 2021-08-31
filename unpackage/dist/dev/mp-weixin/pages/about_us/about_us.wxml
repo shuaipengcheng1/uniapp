@@ -1,0 +1,1 @@
+<view><view data-event-opts="{{[['tap',[['get']]]]}}" bindtap="__e"><view class="_h1">关于我们</view></view><view><map latitude="{{y}}" longitude="{{x}}" markers="{{makers}}" show-compass="{{true}}" enable-traffic="{{true}}" show-location="{{true}}"></map></view><view>地址:成都市</view></view>

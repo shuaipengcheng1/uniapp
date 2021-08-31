@@ -1,0 +1,1 @@
+<view><view class="part_box"><block wx:for="{{msg}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view data-event-opts="{{[['tap',[['goto',[index]]]]]}}" class="part_items" bindtap="__e"><image src="{{item.image_src}}" mode="widthFix"></image></view></block></view><view class="_hr"></view><view class="title"><text>精选商品</text></view></view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "商品精选",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "info": "/components/info"
+  }
+}

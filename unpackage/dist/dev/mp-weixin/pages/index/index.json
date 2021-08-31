@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "黑马商城",
+  "navigationBarTextStyle": "white",
+  "onReachBottomDistance": 200,
+  "usingComponents": {
+    "swiper": "/components/Swiper",
+    "part": "/components/Part",
+    "info": "/components/info"
+  }
+}

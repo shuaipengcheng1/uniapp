@@ -5,7 +5,7 @@
 		<!-- 分类 -->
 		<Part></Part>
 		<!-- 推荐列表 20长度 -->
-		<Info @reach = "reach"></Info>
+		<Info ></Info>
 	</view>
 </template>
 

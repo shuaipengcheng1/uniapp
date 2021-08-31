@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/admin/admin",
+    "pages/caft/caft",
+    "pages/product_info/product_info",
+    "pages/product_advice/product_advice",
+    "pages/info/info",
+    "pages/about_us/about_us",
+    "pages/goods_part/goods_part"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#9f0000",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "iconPath": "static/_home.png",
+        "pagePath": "pages/index/index",
+        "selectedIconPath": "static/home.png",
+        "text": "首页"
+      },
+      {
+        "iconPath": "static/_search.png",
+        "pagePath": "pages/info/info",
+        "selectedIconPath": "static/search.png",
+        "text": "资讯"
+      },
+      {
+        "iconPath": "static/_videocamera.png",
+        "pagePath": "pages/caft/caft",
+        "selectedIconPath": "static/videocamera.png",
+        "text": "购物车"
+      },
+      {
+        "iconPath": "static/_my.png",
+        "pagePath": "pages/admin/admin",
+        "selectedIconPath": "static/my.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

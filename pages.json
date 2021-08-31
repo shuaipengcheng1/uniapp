@@ -15,13 +15,7 @@
 				"navigationBarTextStyle":"white"
 			}
 		},
-		{
-			"path": "pages/info/info",
-			"style": {
-				"navigationBarTitleText": "资讯",
-				"navigationBarTextStyle":"white"
-			}
-		},
+		
 		{
 			"path": "pages/caft/caft",
 			"style": {
@@ -33,10 +27,45 @@
 			"path":"pages/product_info/product_info",
 			"style":{
 				"navigationBarTitleText":"商品详情",
+				"navigationBarTextStyle":"white",
+				"onReachBottomDistance":200
+			}
+		}
+	    ,{
+            "path" : "pages/product_advice/product_advice",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "商品精选",
+                "enablePullDownRefresh": true
+            }
+            
+        },
+		{
+			"path": "pages/info/info",
+			"style": {
+				"navigationBarTitleText": "资讯",
 				"navigationBarTextStyle":"white"
 			}
 		}
-	],
+        ,{
+            "path" : "pages/about_us/about_us",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "关于我们",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/goods_part/goods_part",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "商品分类",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
@@ -53,7 +82,7 @@
 			},
 			{
 				"iconPath":"static/_search.png",
-				"pagePath":"pages/info/info,",
+				"pagePath":"pages/info/info",
 				"selectedIconPath":"static/search.png",
 				"text":"资讯"
 			},
